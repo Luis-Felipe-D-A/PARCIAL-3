@@ -1,0 +1,89 @@
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a73e8, #4fc3f7);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-container {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #1a73e8;
+    margin-bottom: 25px;
+}
+
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: #1a73e8;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background: #0f56b3;
+}
+
+/* MENSAJE DE ERROR */
+.login-container .mensaje {
+    color: #d9534f;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.login-container .link-registro {
+    display: block;
+    margin-top: 15px;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.login-container .link-registro:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 400px) {
+    .login-container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

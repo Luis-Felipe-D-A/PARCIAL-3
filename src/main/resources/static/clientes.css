@@ -1,0 +1,107 @@
+/* clientes.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Tabla de clientes */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botones y enlaces */
+a {
+    text-decoration: none;
+    color: #3498db;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 6px 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Formulario */
+form {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form button {
+    width: 100%;
+}
+
+/* Enlaces de navegación */
+a.volver {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e74c3c;
+}
+
+a.volver:hover {
+    text-decoration: underline;
+}

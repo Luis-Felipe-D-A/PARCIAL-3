@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Principal</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Mi Sistema</h2>
+
+        <nav class="menu">
+            <a th:href="@{/clientes}" class="menu-item">🏠 Clientes</a>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+        <header class="top-header">
+            <h1>Bienvenido, 
+                <span th:text="${usuario.nombre + ' ' + usuario.apellido}"></span>
+            </h1>
+            <a th:href="@{/usuarios/login}" class="logout-btn">Cerrar sesión</a>
+        </header>
+
+        <section class="profile-section">
+            <i class="fa-solid fa-user-circle fa-6x profile-icon"></i>
+            <h2 th:text="${usuario.nombre + ' ' + usuario.apellido}"></h2>
+        </section>
+
+        <section class="user-info-box">
+            <h2>Información del Usuario</h2>
+            <p><strong>Nombre completo:</strong> 
+                <span th:text="${usuario.nombre + ' ' + usuario.apellido}"></span>
+            </p>
+            <p><strong>Username:</strong> <span th:text="${usuario.username}"></span></p>
+            <p><strong>Correo:</strong> 
+                <span th:text="${usuario.username + '@miempresa.com'}"></span>
+            </p>
+        </section>
+
+        <section class="links-section">
+            <h2>Links importantes</h2>
+            <div class="links">
+                <a href="https://facebook.com" target="_blank" class="link-btn">
+                    <i class="fa-brands fa-facebook"></i> Facebook
+                </a>
+
+                <a href="https://www.unitecnar.edu.co/" target="_blank" class="link-btn">
+                    <i class="fa-solid fa-graduation-cap"></i> Universidad
+                </a>
+
+                <a href="https://linkedin.com" target="_blank" class="link-btn">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>

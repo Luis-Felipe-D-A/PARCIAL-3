@@ -1,0 +1,149 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #34c759, #1a73e8, #4fc3f7);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.registro-wrapper {
+    width: 100%;
+    max-width: 600px;  /* más ancho para comodidad */
+    padding: 20px;
+}
+
+.registro-container {
+    background-color: white;
+    padding: 50px 45px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Título */
+.registro-container h2 {
+    color: #1a73e8;
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+.input-group i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1a73e8;
+    font-size: 20px;
+}
+
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 18px 18px 18px 50px;  
+    border: 1.8px solid #ccc;
+    border-radius: 15px;
+    font-size: 18px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 12px rgba(26, 115, 232, 0.4);
+}
+
+
+button {
+    width: 100%;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(26, 115, 232, 0.5);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #145dbf;
+    box-shadow: 0 10px 30px rgba(20, 93, 191, 0.7);
+}
+
+
+.mensaje {
+    color: #d9534f;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    animation: shake 0.3s;
+}
+
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+
+.text-center {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.text-center a {
+    color: #1a73e8;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 600px) {
+    .registro-container {
+        padding: 35px 25px;
+        border-radius: 12px;
+    }
+
+    .input-group input,
+    .input-group select {
+        padding-left: 45px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 18px;
+    }
+}

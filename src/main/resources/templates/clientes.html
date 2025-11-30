@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="/clientes.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1>Clientes</h1>
+
+<!-- Botón para abrir el modal -->
+<button id="btnAgregar">Agregar Cliente</button>
+
+<!-- Tabla de clientes -->
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="cliente : ${clientes}">
+            <td th:text="${cliente.id}"></td>
+            <td th:text="${cliente.nombre}"></td>
+            <td th:text="${cliente.apellido}"></td>
+            <td th:text="${cliente.correo}"></td>
+            <td th:text="${cliente.telefono}"></td>
+            <td>
+                <a th:href="@{'/clientes/eliminar/' + ${cliente.id}}">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Modal -->
+<div id="modalCliente" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Agregar Cliente</h2>
+        <form th:action="@{/clientes}" method="post">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required>
+            <label>Apellido:</label>
+            <input type="text" name="apellido" required>
+            <label>Correo:</label>
+            <input type="email" name="correo" required>
+            <label>Teléfono:</label>
+            <input type="text" name="telefono" required>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</div>
+
+<script>
+// Abrir modal
+$("#btnAgregar").click(function() {
+    $("#modalCliente").show();
+});
+
+// Cerrar modal
+$(".close").click(function() {
+    $("#modalCliente").hide();
+});
+
+// Cerrar modal haciendo clic fuera del contenido
+window.onclick = function(event) {
+    if (event.target.id === "modalCliente") {
+        $("#modalCliente").hide();
+    }
+}
+</script>
+
+</body>
+</html>
